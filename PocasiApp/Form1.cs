@@ -1,6 +1,7 @@
 using System.Collections.Immutable;
 using System.Net.Http;
 using System.Text.Json.Serialization;
+using System.Windows.Forms.VisualStyles;
 using System.Xml;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
@@ -18,7 +19,7 @@ namespace PocasiApp
             labelCurrentCity.ForeColor = System.Drawing.Color.White;
             timer1.Enabled = true;
             timer1.Start();
-            timer1.Interval = (6*1000);
+            timer1.Interval = (6 * 1000);
             timer1.Tick += new EventHandler(timer1_Tick);
         }
 
@@ -53,7 +54,7 @@ namespace PocasiApp
             }
 
         }
-       
+
         public async void getDataButton_Click(object sender, EventArgs e)
         {
             var tempInfo = await MainProcessor.LoadTempValues();
@@ -63,7 +64,7 @@ namespace PocasiApp
             labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
         }
 
-        
+
 
         private void getValueBox_TextChanged(object sender, EventArgs e)
         {
@@ -72,17 +73,17 @@ namespace PocasiApp
 
         private void comboCityName_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
             PocasiApp.GetUrl.CITY = comboCityName.Text;
 
         }
 
         private void typeCityName_TextChanged(object sender, EventArgs e)
         {
-            
+
             comboCityName.Text = null;
         }
-       
+
         private async void Form1_Load(object sender, EventArgs e)
         {
             var tempInfo = await MainProcessor.LoadTempValues();
@@ -98,6 +99,9 @@ namespace PocasiApp
             PocasiApp.GetUrl.CITY = comboCityName.Text;
         }
 
-       
+        private void labelTemperature_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
