@@ -62,7 +62,31 @@ namespace PocasiApp
             labelHumidity.Text = tempInfo.Humidity.ToString();
             labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
             labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
+            var weatherInfo = await WeatherProcessor.LoadWeather();
+            label5.Text = weatherInfo.main.ToString();
+
+            switch (weatherInfo.main.ToString())
+            {
+                case "Clouds":
+                    pictureBox1.Image = Properties.Resources.clouds;
+                    BackgroundImage = Properties.Resources.cloudy_skies_bg;
+                    break;
+                case "Rain":
+                    pictureBox1.Image = Properties.Resources.rainy;
+                    BackgroundImage = Properties.Resources.rain_skies_bg;
+                    break;
+                case "Clear":
+                    pictureBox1.Image = Properties.Resources.sun;
+                    BackgroundImage = Properties.Resources.clearskies;
+                    break;
+                case "Drizzle":
+                    pictureBox1.Image = Properties.Resources.clouds_with_sun;
+                    BackgroundImage = Properties.Resources.drizzle_skies_bg;
+                    break;
+            }
+
         }
+
 
 
 
@@ -91,17 +115,76 @@ namespace PocasiApp
             labelHumidity.Text = tempInfo.Humidity.ToString();
             labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
             labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
+            var weatherInfo = await WeatherProcessor.LoadWeather();
+            label5.Text = weatherInfo.main.ToString();
+
+            switch (weatherInfo.main.ToString())
+            {
+                case "Clouds":
+                    pictureBox1.Image = Properties.Resources.clouds;
+                    BackgroundImage = Properties.Resources.cloudy_skies_bg;
+                    break;
+                case "Rain":
+                    pictureBox1.Image = Properties.Resources.rainy;
+                    BackgroundImage = Properties.Resources.rain_skies_bg;
+                    break;
+                case "Clear":
+                    pictureBox1.Image = Properties.Resources.sun;
+                    BackgroundImage = Properties.Resources.clearskies;
+                    break;
+                case "Drizzle":
+                    pictureBox1.Image = Properties.Resources.clouds_with_sun;
+                    BackgroundImage = Properties.Resources.drizzle_skies_bg;
+                    break;
+            }
 
         }
+
+
 
         private void comboCityName_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             PocasiApp.GetUrl.CITY = comboCityName.Text;
         }
 
+
+
         private void labelTemperature_Click(object sender, EventArgs e)
         {
 
         }
+
+            async void comboCityName_TextChanged(object sender, EventArgs e)
+            {
+                var tempInfo = await MainProcessor.LoadTempValues();
+                labelTemperature.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
+                labelHumidity.Text = tempInfo.Humidity.ToString();
+                labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
+                labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
+                var weatherInfo = await WeatherProcessor.LoadWeather();
+                label5.Text = weatherInfo.main.ToString();
+
+                switch (weatherInfo.main.ToString())
+                {
+                    case "Clouds":
+                        pictureBox1.Image = Properties.Resources.clouds;
+                        BackgroundImage = Properties.Resources.cloudy_skies_bg;
+                        break;
+                    case "Rain":
+                        pictureBox1.Image = Properties.Resources.rainy;
+                        BackgroundImage = Properties.Resources.rain_skies_bg;
+                        break;
+                    case "Clear":
+                        pictureBox1.Image = Properties.Resources.sun;
+                        BackgroundImage = Properties.Resources.clearskies;
+                        break;
+                    case "Drizzle":
+                        pictureBox1.Image = Properties.Resources.clouds_with_sun;
+                        BackgroundImage = Properties.Resources.drizzle_skies_bg;
+                        break;
+            }
+
+        }
+    
     }
 }

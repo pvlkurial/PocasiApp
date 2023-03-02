@@ -43,7 +43,6 @@
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-           
             // 
             // getDataButton
             // 
@@ -94,7 +93,9 @@
             comboCityName.Size = new Size(157, 30);
             comboCityName.Sorted = true;
             comboCityName.TabIndex = 5;
+            comboCityName.Text = "London";
             comboCityName.SelectedIndexChanged += comboCityName_SelectedIndexChanged_1;
+            comboCityName.TextChanged += comboCityName_TextChanged;
             // 
             // label3
             // 
