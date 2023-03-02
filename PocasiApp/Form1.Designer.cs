@@ -43,6 +43,7 @@
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+           
             // 
             // getDataButton
             // 
@@ -51,7 +52,7 @@
             getDataButton.BackgroundImage = Properties.Resources.refresh_icon;
             getDataButton.BackgroundImageLayout = ImageLayout.Zoom;
             getDataButton.FlatStyle = FlatStyle.Flat;
-            getDataButton.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            getDataButton.Font = new Font("Arial Rounded MT Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             getDataButton.ForeColor = Color.Transparent;
             getDataButton.ImageAlign = ContentAlignment.TopRight;
             getDataButton.Location = new Point(431, 40);
@@ -135,7 +136,6 @@
             labelTemperature.TabIndex = 9;
             labelTemperature.Text = "NAN";
             labelTemperature.TextAlign = ContentAlignment.TopCenter;
-            labelTemperature.Click += labelTemperature_Click;
             // 
             // labelHumidity
             // 
@@ -203,7 +203,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            BackgroundImageLayout = ImageLayout.None;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 680);
             Controls.Add(label5);
             Controls.Add(pictureBox1);
