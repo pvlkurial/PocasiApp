@@ -25,65 +25,13 @@ namespace PocasiApp
 
         public async void timer1_Tick(object sender, EventArgs e)
         {
-            var tempInfo = await MainProcessor.LoadTempValues();
-            labelTemperature.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
-            labelHumidity.Text = tempInfo.Humidity.ToString();
-            labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
-            labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
-            var weatherInfo = await WeatherProcessor.LoadWeather();
-            label5.Text = weatherInfo.main.ToString();
-
-            switch (weatherInfo.main.ToString())
-            {
-                case "Clouds":
-                    pictureBox1.Image = Properties.Resources.clouds;
-                    BackgroundImage = Properties.Resources.cloudy_skies_bg;
-                    break;
-                case "Rain":
-                    pictureBox1.Image = Properties.Resources.rainy;
-                    BackgroundImage = Properties.Resources.rain_skies_bg;
-                    break;
-                case "Clear":
-                    pictureBox1.Image = Properties.Resources.sun;
-                    BackgroundImage = Properties.Resources.clearskies;
-                    break;
-                case "Drizzle":
-                    pictureBox1.Image = Properties.Resources.clouds_with_sun;
-                    BackgroundImage = Properties.Resources.drizzle_skies_bg;
-                    break;
-            }
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
 
         }
 
         public async void getDataButton_Click(object sender, EventArgs e)
         {
-            var tempInfo = await MainProcessor.LoadTempValues();
-            labelTemperature.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
-            labelHumidity.Text = tempInfo.Humidity.ToString();
-            labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
-            labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
-            var weatherInfo = await WeatherProcessor.LoadWeather();
-            label5.Text = weatherInfo.main.ToString();
-
-            switch (weatherInfo.main.ToString())
-            {
-                case "Clouds":
-                    pictureBox1.Image = Properties.Resources.clouds;
-                    BackgroundImage = Properties.Resources.cloudy_skies_bg;
-                    break;
-                case "Rain":
-                    pictureBox1.Image = Properties.Resources.rainy;
-                    BackgroundImage = Properties.Resources.rain_skies_bg;
-                    break;
-                case "Clear":
-                    pictureBox1.Image = Properties.Resources.sun;
-                    BackgroundImage = Properties.Resources.clearskies;
-                    break;
-                case "Drizzle":
-                    pictureBox1.Image = Properties.Resources.clouds_with_sun;
-                    BackgroundImage = Properties.Resources.drizzle_skies_bg;
-                    break;
-            }
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
 
         }
 
@@ -110,33 +58,7 @@ namespace PocasiApp
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            var tempInfo = await MainProcessor.LoadTempValues();
-            labelTemperature.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
-            labelHumidity.Text = tempInfo.Humidity.ToString();
-            labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
-            labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
-            var weatherInfo = await WeatherProcessor.LoadWeather();
-            label5.Text = weatherInfo.main.ToString();
-
-            switch (weatherInfo.main.ToString())
-            {
-                case "Clouds":
-                    pictureBox1.Image = Properties.Resources.clouds;
-                    BackgroundImage = Properties.Resources.cloudy_skies_bg;
-                    break;
-                case "Rain":
-                    pictureBox1.Image = Properties.Resources.rainy;
-                    BackgroundImage = Properties.Resources.rain_skies_bg;
-                    break;
-                case "Clear":
-                    pictureBox1.Image = Properties.Resources.sun;
-                    BackgroundImage = Properties.Resources.clearskies;
-                    break;
-                case "Drizzle":
-                    pictureBox1.Image = Properties.Resources.clouds_with_sun;
-                    BackgroundImage = Properties.Resources.drizzle_skies_bg;
-                    break;
-            }
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
 
         }
 
@@ -156,33 +78,7 @@ namespace PocasiApp
 
             async void comboCityName_TextChanged(object sender, EventArgs e)
             {
-                var tempInfo = await MainProcessor.LoadTempValues();
-                labelTemperature.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
-                labelHumidity.Text = tempInfo.Humidity.ToString();
-                labelFeelsLike.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
-                labelCurrentCity.Text = PocasiApp.GetUrl.CITY;
-                var weatherInfo = await WeatherProcessor.LoadWeather();
-                label5.Text = weatherInfo.main.ToString();
-
-                switch (weatherInfo.main.ToString())
-                {
-                    case "Clouds":
-                        pictureBox1.Image = Properties.Resources.clouds;
-                        BackgroundImage = Properties.Resources.cloudy_skies_bg;
-                        break;
-                    case "Rain":
-                        pictureBox1.Image = Properties.Resources.rainy;
-                        BackgroundImage = Properties.Resources.rain_skies_bg;
-                        break;
-                    case "Clear":
-                        pictureBox1.Image = Properties.Resources.sun;
-                        BackgroundImage = Properties.Resources.clearskies;
-                        break;
-                    case "Drizzle":
-                        pictureBox1.Image = Properties.Resources.clouds_with_sun;
-                        BackgroundImage = Properties.Resources.drizzle_skies_bg;
-                        break;
-            }
+                PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
 
         }
     
