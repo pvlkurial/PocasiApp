@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PocasiApp.Models
 {
-    internal class WindPropModel
+    public class WindPropModel
     {
         public double Speed { get; set; }
     }
