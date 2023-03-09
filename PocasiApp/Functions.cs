@@ -19,7 +19,7 @@ namespace PocasiApp
 
 
 
-        public static async void LoadAll(Label label1, Label label2, Label label3, Label label4, Label label5, PictureBox pictureBox1, Form form1)
+        public static async void LoadAll(Label label1, Label label2, Label label3, Label label4, Label label5, PictureBox pictureBox1, Form form1, Label label6)
         {
             var tempInfo = await MainProcessor.LoadTempValues();
             label1.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
@@ -28,6 +28,8 @@ namespace PocasiApp
             label4.Text = PocasiApp.GetUrl.CITY;
             var weatherInfo = await WeatherProcessor.LoadWeather();
             label5.Text = weatherInfo.main.ToString();
+            var windSpeed = await WindProcessor.LoadWindValues();
+            label6.Text = windSpeed.Speed.ToString();
 
             switch (weatherInfo.main.ToString())
             {

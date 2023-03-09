@@ -25,13 +25,13 @@ namespace PocasiApp
 
         public async void timer1_Tick(object sender, EventArgs e)
         {
-            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
 
         }
 
         public async void getDataButton_Click(object sender, EventArgs e)
         {
-            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
 
         }
 
@@ -58,7 +58,7 @@ namespace PocasiApp
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
 
         }
 
@@ -76,11 +76,11 @@ namespace PocasiApp
 
         }
 
-            async void comboCityName_TextChanged(object sender, EventArgs e)
-            {
-                PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this);
+        async void comboCityName_TextChanged(object sender, EventArgs e)
+        {
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
 
         }
-    
+
     }
 }

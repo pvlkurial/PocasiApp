@@ -41,6 +41,7 @@
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             label5 = new Label();
+            labelWindSpeedValue = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -198,6 +199,17 @@
             label5.TabIndex = 14;
             label5.Text = "label5";
             // 
+            // labelWindSpeedValue
+            // 
+            labelWindSpeedValue.AutoSize = true;
+            labelWindSpeedValue.Font = new Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelWindSpeedValue.ForeColor = Color.White;
+            labelWindSpeedValue.Location = new Point(130, 559);
+            labelWindSpeedValue.Name = "labelWindSpeedValue";
+            labelWindSpeedValue.Size = new Size(286, 38);
+            labelWindSpeedValue.TabIndex = 15;
+            labelWindSpeedValue.Text = "labelWindSpeedValue";
+            // 
             // Form1
             // 
             AllowDrop = true;
@@ -206,6 +218,7 @@
             BackColor = Color.FromArgb(64, 64, 64);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 680);
+            Controls.Add(labelWindSpeedValue);
             Controls.Add(label5);
             Controls.Add(pictureBox1);
             Controls.Add(labelFeelsLike);
@@ -248,5 +261,6 @@
         public Label labelTemperature;
         public Label labelHumidity;
         public PictureBox pictureBox1;
+        private Label labelWindSpeedValue;
     }
 }
