@@ -42,6 +42,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             label5 = new Label();
             labelWindSpeedValue = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -202,13 +203,25 @@
             // labelWindSpeedValue
             // 
             labelWindSpeedValue.AutoSize = true;
-            labelWindSpeedValue.Font = new Font("Yu Gothic UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelWindSpeedValue.BackColor = Color.Transparent;
+            labelWindSpeedValue.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelWindSpeedValue.ForeColor = Color.White;
-            labelWindSpeedValue.Location = new Point(130, 559);
+            labelWindSpeedValue.Location = new Point(227, 562);
             labelWindSpeedValue.Name = "labelWindSpeedValue";
-            labelWindSpeedValue.Size = new Size(286, 38);
+            labelWindSpeedValue.Size = new Size(83, 36);
             labelWindSpeedValue.TabIndex = 15;
-            labelWindSpeedValue.Text = "labelWindSpeedValue";
+            labelWindSpeedValue.Text = "NAN";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(200, 537);
+            label1.Name = "label1";
+            label1.Size = new Size(153, 25);
+            label1.TabIndex = 16;
+            label1.Text = "RYCHLOST VĚTRU";
             // 
             // Form1
             // 
@@ -218,6 +231,7 @@
             BackColor = Color.FromArgb(64, 64, 64);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 680);
+            Controls.Add(label1);
             Controls.Add(labelWindSpeedValue);
             Controls.Add(label5);
             Controls.Add(pictureBox1);
@@ -262,5 +276,6 @@
         public Label labelHumidity;
         public PictureBox pictureBox1;
         private Label labelWindSpeedValue;
+        private Label label1;
     }
 }
