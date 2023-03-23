@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             getDataButton = new Button();
             label2 = new Label();
             comboCityName = new ComboBox();
@@ -246,6 +247,7 @@
             Controls.Add(getDataButton);
             ForeColor = SystemColors.ActiveCaptionText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
