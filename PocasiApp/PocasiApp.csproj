@@ -6,12 +6,18 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject></StartupObject>
+    <ApplicationIcon>logo1 kopie.png</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="images\**" />
     <EmbeddedResource Remove="images\**" />
     <None Remove="images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo1 kopie.png" />
   </ItemGroup>
 
   <ItemGroup>
