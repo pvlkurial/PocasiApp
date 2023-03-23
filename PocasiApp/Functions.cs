@@ -23,13 +23,13 @@ namespace PocasiApp
         {
             var tempInfo = await MainProcessor.LoadTempValues();
             label1.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Temp).ToString()}°C";
-            label2.Text = tempInfo.Humidity.ToString();
+            label2.Text = tempInfo.Humidity.ToString() + "%";
             label3.Text = $"{Functions.KelvinToCelsiusRound(tempInfo.Feels_like).ToString()}°C";
             label4.Text = PocasiApp.GetUrl.CITY;
             var weatherInfo = await WeatherProcessor.LoadWeather();
             label5.Text = weatherInfo.main.ToString();
             var windSpeed = await WindProcessor.LoadWindValues();
-            label6.Text = windSpeed.Speed.ToString();
+            label6.Text = windSpeed.Speed.ToString() + "m/s";
 
             switch (weatherInfo.main.ToString())
             {

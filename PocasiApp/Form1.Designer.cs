@@ -69,12 +69,12 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(336, 450);
+            label2.Location = new Point(303, 450);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(96, 25);
+            label2.Size = new Size(173, 25);
             label2.TabIndex = 3;
-            label2.Text = "HUMIDITA";
+            label2.Text = "VLHKOST VZDUCHU";
             // 
             // comboCityName
             // 
@@ -146,7 +146,7 @@
             labelHumidity.BackColor = Color.Transparent;
             labelHumidity.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelHumidity.ForeColor = Color.White;
-            labelHumidity.Location = new Point(336, 475);
+            labelHumidity.Location = new Point(342, 475);
             labelHumidity.Margin = new Padding(4, 0, 4, 0);
             labelHumidity.Name = "labelHumidity";
             labelHumidity.Size = new Size(90, 37);
@@ -206,7 +206,7 @@
             labelWindSpeedValue.BackColor = Color.Transparent;
             labelWindSpeedValue.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelWindSpeedValue.ForeColor = Color.White;
-            labelWindSpeedValue.Location = new Point(227, 562);
+            labelWindSpeedValue.Location = new Point(211, 562);
             labelWindSpeedValue.Name = "labelWindSpeedValue";
             labelWindSpeedValue.Size = new Size(83, 36);
             labelWindSpeedValue.TabIndex = 15;
