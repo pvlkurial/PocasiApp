@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject></StartupObject>
-    <ApplicationIcon>logo1 kopie.png</ApplicationIcon>
+    <ApplicationIcon>logo1 kopie.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="logo1 kopie.png" />
+    <Content Include="logo1 kopie.ico" />
   </ItemGroup>
 
   <ItemGroup>
