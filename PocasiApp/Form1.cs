@@ -19,7 +19,7 @@ namespace PocasiApp
             labelCurrentCity.ForeColor = System.Drawing.Color.White;
             timer1.Enabled = true;
             timer1.Start();
-            timer1.Interval = (6 * 1000);
+            timer1.Interval = (15 * 1000);
             timer1.Tick += new EventHandler(timer1_Tick);
         }
 
@@ -47,6 +47,8 @@ namespace PocasiApp
         {
 
             PocasiApp.GetUrl.CITY = comboCityName.Text;
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
+
 
         }
 
@@ -67,12 +69,7 @@ namespace PocasiApp
         private void comboCityName_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             PocasiApp.GetUrl.CITY = comboCityName.Text;
-        }
-
-
-
-        private void labelTemperature_Click(object sender, EventArgs e)
-        {
+            PocasiApp.Functions.LoadAll(labelTemperature, labelHumidity, labelFeelsLike, labelCurrentCity, label5, pictureBox1, this, labelWindSpeedValue);
 
         }
 
